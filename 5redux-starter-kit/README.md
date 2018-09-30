@@ -21,3 +21,9 @@ Promise 기반의 비동기 작업을 좀더 편하게 해주는 미들웨어입
 Promise 객체를 payload로 전달하면서 시작, 성공, 실패할때 액션뒷부분에 _PENDING, _FULFILLED< _REJECTED를 붙여서 반환합니다.
 각 그렇게된다면 액션타입을 굳이 3종류로 나눠서 설정할필요가없죠.,
 대신 우리는 기존코드에서 SUCCESS FAILUER를 사용하니 이를 임의값으로 설정하겠습니다.
+
+# redux-pender
+redux-pender 는 redux Promise 기반 액션들을 관리하는 미들웨어가 포함되어 있는 라이브러리입니다.
+작동방식은 위에 모듈과 빗스하게 동작하지만, 액션객체안에 payload가 Promise형태라면, 시작하기전, 완료 또는 실패했을때 뒤에 PENDING, SUCCESS,FAILURE를 접미사를 붙여준다, 추가로 요청 액션취소, 관련액션들을 처리하는 핸들러함수들을 자동으로 만드는 도구들도있다.
+
+yarn add
