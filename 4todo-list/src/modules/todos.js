@@ -28,8 +28,7 @@ const initialState = List([
 //리듀서 만들기
 export default handleActions({
     [INSERT]: (state, action) =>{
-        const {id, text, done} = action.paylaod;
-
+        const {id, text, done} = action.payload;
         return state.push(Map({
             id,
             text,

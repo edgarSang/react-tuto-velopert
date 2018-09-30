@@ -1,6 +1,5 @@
 import { Map } from 'immutable';
-import { handleAction, createAction } from 'redux-actions';
-import handleActions from 'redux-actions/lib/handleActions';
+import { handleActions, createAction } from 'redux-actions';
 
 const SET_INPUT = 'input/SET_INPUT';
 export const setInput = createAction(SET_INPUT);
@@ -13,4 +12,4 @@ export default handleActions({
     [SET_INPUT]: (state, action) => {
         return state.set('value', action.payload);
     }
-})
+}, initialState);

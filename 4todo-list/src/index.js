@@ -8,7 +8,7 @@ import modules from './modules';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-const store = createStore(modules, window.devToolsExtesion && window.devToolsExtesion());
+const store = createStore(modules, window.devToolsExtension && window.devToolsExtension());
 
 ReactDOM.render(
     <Provider store={store}>
