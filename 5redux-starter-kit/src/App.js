@@ -1,27 +1,39 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import * as postActions from './modules/post';
 import * as counterActions from './modules/counter';
-import post, * as postActions from './modules/post';
-import axios from 'axios';
 
 class App extends Component {
 
-    loadData = () => {
-        const { PostActions, number } = this.props;
-        PostActions.getPost(number).then(
-            (response) => {
-                console.log(response);
-            }
-        ).catch(
-            (error) => {
-                console.log(error);
-            }
-        );
+    cancelRequest = null;
+
+    handleCancel = () => {
+        if(this.cancelRequest) {
+            this.cancelRequest();
+            this.cancelRequest = null;
+        }
     }
+
+    loadData = async () => {
+        const { PostActions, number } = this.props;
+        try {
+            const p = PostActions.getPost(number);
+            this.cancelRequest = p.cancel;
+            const response = await p;
+            console.log(response);
+        } catch (e) { 
+            console.log(e);
+        }
+    }   
 
     componentDidMount() {
         this.loadData();
+        window.addEventListener('keyup', (e) => {
+            if(e.key === 'Escape') {
+                this.handleCancel();
+            }
+        })
     }
 
     componentDidUpdate(prevProps, prevState) {

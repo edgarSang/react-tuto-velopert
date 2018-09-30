@@ -35,6 +35,14 @@ export default handleActions({
                     body
                 }
             }
+        },
+        onCancel: (state,action) => {
+            return {
+                data: {
+                    title: '취소됨',
+                    body: '취소됨'
+                }
+            }
         }
         //함수를 생략한다면 기본적으로 (state, action) => state를 설정합니다.
         //state를 그대로 반환한다는것이죠,
