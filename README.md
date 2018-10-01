@@ -24,3 +24,14 @@ todo
 필수 서드파티 redux & react
 ------
 todo
+
+
+마지막 대망의  blog front end project 순서
+----------------------------
+1. 불필요한 파일 제거 및 Sass 및 css 모듈 적용
+ - yarn eject
+ - yarn add node-sass sass-loader classnames
+    - webpack에 sass loader을 위해 webpack.config.dev.js수정 및 config/path.js에 globalStyles 등록
+    - webpack.config.prod.js 도 수정
+
+2. 라우터와 리덕스 적용
