@@ -1,0 +1,23 @@
+/* body 타이포 그라피등 설정*/
+@import url("//fonts.googleapis.com/earlyaccess/notosanskr.css");
+@import url("//cdn.jsdelivr.net/gh/velopert/font-d2coding@1.2.1/d2coding.css");
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+//박스사이즈 일괄설정
+* {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+//링크 스타일 밑줄 색상  무효화.
