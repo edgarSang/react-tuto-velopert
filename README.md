@@ -54,3 +54,6 @@ todo
  - 그럼 그런식으로 템플릿을 생성해줍니다.
  - 반응형 디자인을 쉽게 include-media AND 그림자를 간편하게 설정하는 metarial-shadow 믹스인입니다.
  - yarn add opencolor include-media
+
+6. 나머지 컴포넌트들 생성.
+ - Header, PageTemplate, ListPage, PageNation 등등..
