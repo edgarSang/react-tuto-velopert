@@ -1,4 +1,4 @@
-export { default as editor } from './ediotr';
+export { default as editor } from './editor';
 export { default as base } from './base';
 export { default as list } from './list';
 export { default as post } from './post';

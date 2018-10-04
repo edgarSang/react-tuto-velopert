@@ -12,7 +12,7 @@ class EditorTemplate extends Component {
     //세퍼레이터 클릭후 마우스를 움직일때
     handleMouseMove = (e) => {
         this.setState({
-            leftPercentage: e.clinetX / window.innerWidth
+            leftPercentage: e.clientX / window.innerWidth
         });
     }
 
@@ -26,9 +26,6 @@ class EditorTemplate extends Component {
         document.body.addEventListener('mousemove', this.handleMouseMove);
         window.addEventListener('mouseup', this.handleMouseUp);
     }
-
-
-
 
     render() {
         const { header, editor, preview } = this.props;
